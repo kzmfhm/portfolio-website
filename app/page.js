@@ -1,6 +1,7 @@
+import Socials from "@/components/Socials";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
-import "./globals.css";
+
 export default function Home() {
   return (
     <section className="h-full">
@@ -17,6 +18,20 @@ export default function Home() {
               I excel in crafting elegant digital experiences and I am efficient
               in various programming languages and technologies
             </p>
+            {/* btns & socials*/}
+            <div className="flex flex-col xl:flex-row items-center gap-8">
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex uppercase gap-2"
+              >
+                <span>Download CV</span>
+                <FiDownload className="text-xl" />
+              </Button>
+              <div className="mb-8 xl:mb-0">
+                <Socials />
+              </div>
+            </div>
           </div>
           {/* photo */}
           <div>photo</div>
