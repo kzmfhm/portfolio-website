@@ -8,13 +8,14 @@ export default function Home() {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
-          <div className="text-center xl:text-left  ">
-            <span className="text-xl ">Software Developer</span>
+          <div className="text-center xl:text-left ">
             <h1 className="h1 mb-6">
               Hello I&apos;m <br />
               <span className="text-accent">khuzaima </span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+
+            <span className="text-2xl">Software Developer</span>
+            <p className="max-w-[500px] mb-9 text-white/80 mt-9">
               I excel in crafting elegant digital experiences and I am efficient
               in various programming languages and technologies
             </p>
@@ -29,7 +30,11 @@ export default function Home() {
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Socials />
+                <Socials
+                  containerStyles="flex gap-6"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center 
+                  text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                />
               </div>
             </div>
           </div>
