@@ -11,7 +11,7 @@ const Photo = () => {
                 <motion.div
                     initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeInOut' } }}
                     className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
-                    <Image src="/jpeg/profile.jpeg" fill priority alt="profile" className="object-cover rounded-full" />
+                    <Image src="/png/profile.png" fill priority alt="profile" className="object-cover rounded-full" />
                 </motion.div>
                 {/* circle */}
                 <motion.svg className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
