@@ -4,8 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { motion } from "framer-motion"
 import { FaReact, FaFigma, FaHtml5, FaNodeJs,FaCss3,FaJs } from "react-icons/fa"
-import {SiTailwindcss,SiNextdotJs} from "react-icons/si"
-
+import { SiNextdotjs, SiTypescript ,SiCanva,SiTailwindcss, SiBootstrap, SiExpress } from "react-icons/si";
 
 const about = {
     title: "About me",
@@ -43,7 +42,7 @@ const about = {
 const experience = {
   icon: "",
   title:"My experience",
-  description: "Asperiores sunt, molestias animi error temporibus fugiat veritatis eum! Aperiam asperiores ipsa eos distinctio quisquam eligendi ab illo error, unde tenetur laborum.",
+  description: "Molestias animi error temporibus fugiat veritatis eum! Aperiam asperiores ipsa eos distinctio quisquam eligendi ab illo error, unde tenetur laborum.",
   items : [
     {
       company : "Tech Solutions Inc",
@@ -65,17 +64,18 @@ const experience = {
       position: "UI/UX Designer",
       duration: "2022 - 2023"
     },
+ 
   ]
 }
 
 const education = {
   icon: "",
   title:"My education",
-  description: "Asperiores sunt, molestias animi error temporibus fugiat veritatis eum! Aperiam asperiores ipsa eos distinctio quisquam eligendi ab illo error, unde tenetur laborum.",
+  description: "Asperiores sunt, molestias animi error Aperiam asperiores ipsa eos distinctio quisquam eligendi ab illo error, unde tenetur laborum.",
   items : [
     {
       institution : "Online Course Plateform",
-      degree: "Full Stack Development Bootcamp",
+      degree: "Full Stack Developer",
       duration: "2023"
     },
     {
@@ -113,6 +113,10 @@ const skills = {
       name: "javascript",
     },
     {
+      icon : <SiTypescript/>,
+      name: "typescript",
+    },
+    {
       icon : <FaReact/>,
       name: "react.js",
     },
@@ -121,7 +125,7 @@ const skills = {
       name: "tailwind.css",
     },
     {
-      icon : <SiNextdotJs/>,
+      icon : <SiNextdotjs/>,
       name: "next.js",
     },
     {
@@ -131,6 +135,18 @@ const skills = {
     {
       icon : <FaFigma/>,
       name: "figma",
+    },
+    {
+      icon : <SiCanva/>,
+      name: "canva",
+    },
+    {
+      icon : < SiBootstrap/>,
+      name: "bootstrap",
+    },
+    {
+      icon : < SiExpress/>,
+      name: "express.js",
     }
   ]
 }
@@ -139,7 +155,7 @@ const Resume = () => {
     <motion.div initial={{opacity:0}} animate={{opacity:1, 
     transition:{delay:1.4, duration:0.4,ease:"easeIn"}
     }}
-    className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+    className="min-h-[80vh] xpressjsflex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
@@ -154,9 +170,9 @@ const Resume = () => {
             {/* experience */}
             <TabsContent value="experience" className="w-full leading-loose">
             <div className="flex flex-col text-center gap-[30px] xl:text-left">
-              <h3 className="text-4xl font-bold">{experience.title}</h3>
-              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-              <ScrollArea className="h-[400px]">
+              <h3 className="text-4xl font-bold">{education.title}</h3>
+              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
+              <ScrollArea className="h-[400px] ">
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                   {experience.items.map((item, index) => {
                       return <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1">
@@ -176,9 +192,48 @@ const Resume = () => {
 
             </TabsContent>
              {/* education*/}
-             <TabsContent value="education" className="w-full">expe</TabsContent>
+             <TabsContent value="education" className="w-full leading-loose">
+             <div className="flex flex-col text-center gap-[30px] xl:text-left">
+              <h3 className="text-4xl font-bold">{experience.title}</h3>
+              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
+              <ScrollArea className="h-[400px] ">
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                  {education.items.map((item, index) => {
+                      return <li key={index} className="bg-[#232329] h-[204px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1">
+                        <span className="text-accent mb-3">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                        <div className="flex items-center gap-3 ">
+                          {/* dot */}
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p className="text-white/60">{item.institution}</p>
+                        </div>
+                      </li>
+                  })}
+                </ul>
+              </ScrollArea>
+            </div>
+             </TabsContent>
               {/* skills */}
-            <TabsContent  value="skills" className="w-full">expnce</TabsContent>
+            <TabsContent value="skills" className="w-full h-full leading-loose">
+              <div className="flex flex-col gap-[30px]">
+              <div className="flex flex-col text-center gap-[30px] xl:text-left">
+                <h3 className="text-4xl font-bold">{skills.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                </div>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
+                  {skills.skillsList.map((skill,index) =>{
+                  return <li key={index}>
+                   <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <div className="">{skill.icon}</div>
+                      </TooltipTrigger>
+                    </Tooltip>
+                   </TooltipProvider>
+                  </li>
+                })}</ul>
+              </div>
+            </TabsContent>
              {/* about*/}
              <TabsContent value="about" className="w-full">exience</TabsContent>
           </div>
