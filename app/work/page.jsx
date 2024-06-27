@@ -18,16 +18,17 @@ const projects = [
     description: "Laborum quos sit quisquam quae similique laboriosam necessitatibus aliquam quam voluptatem at ullam voluptates minus, cum, in qui!",
     stack : [
       {
-        name : "Html 5"
-      },
-      {
-        name : "Css 3"
+        name : "Next.js"
       },
       {
         name : "Javascript"
       },
-    ],
+      {
+        name : "CSS"
+      },
+     ],
     image : "/gif/food-website.gif",
+    live:"https://flavor-craft-food-website.vercel.app/",
     github: "https://github.com/kzmfhm"
   },
   {
@@ -47,6 +48,7 @@ const projects = [
       },
     ],
     image : "/gif/3D-form",
+    live:"https://3-d-signup-form.vercel.app/",
     github: "https://github.com/kzmfhm"
   },
   {
@@ -103,6 +105,29 @@ const projects = [
     image : "/gif/tic-act-game.gif",
     github: "https://github.com/kzmfhm"
   },
+  {
+    num: "06",
+    category : "fullstack",
+    title : "personal-portfolio",
+    description: "Laborum quos sit quisquam quae similique laboriosam necessitatibus aliquam quam voluptatem at ullam voluptates minus, cum, in qui!",
+    stack : [
+      {
+        name : "React"
+      },
+      {
+        name : "Node.js"
+      },
+      {
+        name : "Javascript"
+      },
+      {
+        name : "SCSS"
+      },
+    ],
+    image : "/jpg/portfolio",
+    live:"https://my-portfolio-roan-delta.vercel.app/",
+    github: "https://github.com/kzmfhm"
+  },
 ]
 
 const Work = () => {
@@ -114,15 +139,17 @@ const Work = () => {
     className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
       <div className="container mx-auto">
       <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-        <div className="">text</div>
-        <div className="">slider</div>
+        <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+          <div className="">
+            {/* outline num */}
+            <div className="text-8xl leading-none font-bold text-transparent text-outline">{project.num}</div>
+            {/* category */}
+            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+          </div>
+        </div>
+        <div className="w-full xl:w-[50%]">slider</div>
       </div>
       </div>
-
-
-
-
-
     </motion.section>
   )
 }
