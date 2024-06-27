@@ -2,13 +2,12 @@
 
 import { motion } from "framer-motion"
 import React, { useState } from "react"
-import {SwiperSlide,Swiper } from "swiper/react"
 import "swiper/css"
 import { BsArrowUpRight, BsGithub } from "react-icons/bs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import Link from "next/link"
 import Image from "next/image"
-
+import { SwiperSlide,Swiper} from "swiper/react"
 
 const projects = [
   {
@@ -131,7 +130,11 @@ const projects = [
 ]
 
 const Work = () => {
-  const [project, setProject ] = useState(projects[0])
+  const [project, setProject ] = useState(projects[0]);
+  const handleSlideChange = (swiper) => {
+    const currentIndex = swiper.activeIndex;
+    setProject(projects[currentIndex]);
+   }
   return (
     <motion.section initial={{opacity:0}} animate={{opacity:1,
       transition:{delay:1.4, duration:0.4, ease:"easeIn"},
@@ -190,10 +193,24 @@ const Work = () => {
           </div>
         </div>
         <div className="w-full xl:w-[50%]">
-          <Swiper>
+          <Swiper 
+            spaceBetween={30} 
+            slidesPerView={1}
+            className="xl:h-[520px] mb-12"
+            onSlideChange={handleSlideChange}
+            >
             {projects.map((project,index) => {
-              return <SwiperSlide key={index}>
-                slide
+              return <SwiperSlide key={index} className="w-full">
+                <div className="relative group h-[460px] flex justify-center items-center bg-pink-50/20">
+                {/* overlay */}
+                <div className=""></div>
+                {/* image */}
+                <div className="relative w-full h-full">
+                <Image src={project.image} alt={project.category} fill className="object-cover">
+
+                </Image>
+                </div>
+                </div>
               </SwiperSlide>
             })}
           </Swiper>
