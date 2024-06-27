@@ -9,38 +9,39 @@ import { SiNextdotjs, SiTypescript ,SiCanva,SiTailwindcss, SiBootstrap, SiExpres
 const about = {
     title: "About me",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sunt, molestias animi error temporibus fugiat veritatis eum! Aperiam asperiores ipsa eos distinctio quisquam eligendi ab illo error, unde tenetur laborum.",
-    info: {
+    info: [
+      {
       fieldName : "Name",
       fieldValue: "kzm"
     },
-    info: {
-      fieldName : "Phone",
-      fieldValue: "(+92) 555-5555-55"
+    {
+        fieldName : "Phone",
+        fieldValue: "(+92) 555-5555-55"
     },
-    info: {
+    {
       fieldName : "Experience",
       fieldValue: "3+ Years"
     },
-    info: {
+   {
       fieldName : "Skype",
       fieldValue: "kzm.01"
     },
-    info: {
+    {
       fieldName : "Email",
       fieldValue: "johndoe@gmail.com"
     },
-    info: {
+   {
       fieldName : "Freelaunce",
       fieldValue: "Available"
     },
-    info: {
+   {
       fieldName : "Languages",
       fieldValue: "English Spanish"
     }
+  ]
   }
 
 const experience = {
-  icon: "",
   title:"My experience",
   description: "Molestias animi error temporibus fugiat veritatis eum! Aperiam asperiores ipsa eos distinctio quisquam eligendi ab illo error, unde tenetur laborum.",
   items : [
@@ -69,7 +70,6 @@ const experience = {
 }
 
 const education = {
-  icon: "",
   title:"My education",
   description: "Asperiores sunt, molestias animi error Aperiam asperiores ipsa eos distinctio quisquam eligendi ab illo error, unde tenetur laborum.",
   items : [
@@ -168,7 +168,7 @@ const Resume = () => {
           {/* content */}
           <div className="min-h-[70vh] w-full ">
             {/* experience */}
-            <TabsContent value="experience" className="w-full leading-loose">
+            <TabsContent value="experience" className="w-full">
             <div className="flex flex-col text-center gap-[30px] xl:text-left">
               <h3 className="text-4xl font-bold">{education.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
@@ -190,7 +190,7 @@ const Resume = () => {
             </div>
           </TabsContent>
              {/* education*/}
-             <TabsContent value="education" className="w-full leading-loose">
+             <TabsContent value="education" className="w-full">
              <div className="flex flex-col text-center gap-[30px] xl:text-left">
               <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
@@ -212,7 +212,7 @@ const Resume = () => {
             </div>
           </TabsContent>
               {/* skills */}
-            <TabsContent value="skills" className="w-full h-full leading-loose">
+            <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
               <div className="flex flex-col text-center gap-[30px] xl:text-left">
                 <h3 className="text-4xl font-bold">{skills.title}</h3>
@@ -238,7 +238,20 @@ const Resume = () => {
               </div>
             </TabsContent>
              {/* about*/}
-             <TabsContent value="about" className="w-full">exience</TabsContent>
+             <TabsContent value="about" className="w-full text-center xl:text-left ">
+                <div className="">
+                  <h3>{about.title}</h3>
+                  <p>{about.description}</p>
+                  <ul>
+                  {about.info.map((item, index) => {
+                    return <li key={index}>
+                      <span>{item.fieldName}</span>
+                      <span>{item.fieldValue}</span>
+                    </li>
+                  })}
+                  </ul>
+                </div>
+             </TabsContent>
           </div>
         </Tabs>
       </div>
