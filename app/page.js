@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <h1 className="h1 mb-6">
+            <h1 className="h1 mb-2">
               Hello I&apos;m <br />
               <span className="text-accent">khuzaima </span>
             </h1>
