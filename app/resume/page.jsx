@@ -188,9 +188,7 @@ const Resume = () => {
                 </ul>
               </ScrollArea>
             </div>
-          
-
-            </TabsContent>
+          </TabsContent>
              {/* education*/}
              <TabsContent value="education" className="w-full leading-loose">
              <div className="flex flex-col text-center gap-[30px] xl:text-left">
@@ -212,7 +210,7 @@ const Resume = () => {
                 </ul>
               </ScrollArea>
             </div>
-             </TabsContent>
+          </TabsContent>
               {/* skills */}
             <TabsContent value="skills" className="w-full h-full leading-loose">
               <div className="flex flex-col gap-[30px]">
@@ -220,13 +218,14 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold">{skills.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
                 </div>
+                <ScrollArea className="h-[400px] ">
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
                   {skills.skillsList.map((skill,index) =>{
                   return <li key={index}>
                    <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center items-center group">
-                        <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+                      <TooltipTrigger className="w-full h-[130px] bg-[#232329] rounded-xl flex justify-center items-center items-center group">
+                        <div className="text-5xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
                       </TooltipTrigger>
                       <TooltipContent>
                         <p className="capitalize">{skill.name}</p>
@@ -235,6 +234,7 @@ const Resume = () => {
                    </TooltipProvider>
                   </li>
                 })}</ul>
+                </ScrollArea>
               </div>
             </TabsContent>
              {/* about*/}
