@@ -189,7 +189,15 @@ const Work = () => {
            </div>
           </div>
         </div>
-        <div className="w-full xl:w-[50%]">slider</div>
+        <div className="w-full xl:w-[50%]">
+          <Swiper>
+            {projects.map((project,index) => {
+              return <SwiperSlide key={index}>
+                slide
+              </SwiperSlide>
+            })}
+          </Swiper>
+        </div>
       </div>
       </div>
     </motion.section>
