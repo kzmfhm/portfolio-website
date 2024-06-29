@@ -86,7 +86,7 @@ const Contact = () => {
           </li>
         })}
        </ul>
-        </div>
+      </div>
       </div>
      </div>
     </motion.section>
