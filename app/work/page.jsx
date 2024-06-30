@@ -111,16 +111,16 @@ const Work = () => {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%] group">
               {/* outline num */}
-              <div className="text-6xl font-bold text-transparent text-outline group-hover:text-outline-hover transition-all duration-500">{project.num}</div>
+              <div className="text-8xl font-bold text-transparent text-outline group-hover:text-outline-hover transition-all duration-500">{project.num}</div>
               {/* title*/}
-              <h2 className="text-[32px] font-bold text-white group-hover:text-outline-hover transition-all duration-500 capitalize">{project.title}</h2>
+              <h2 className="text-[42px] font-bold text-white group-hover:text-outline-hover transition-all duration-500 capitalize">{project.title}</h2>
               {/* description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-lg text-accent group-hover:text-white">
+                    <li key={index} className="text-2xl text-accent group-hover:text-white">
                       {item.name}
                       {/* remove last comma */}
                       {index !== project.stack.length - 1 && ","}

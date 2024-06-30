@@ -32,5 +32,8 @@
     p {
       @apply text-[18px]
     }
+    .span {
+      @apply text-[18px]
+    }
   }
 
