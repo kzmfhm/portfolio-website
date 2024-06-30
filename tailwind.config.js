@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from "tailwindcss/defaultTheme";
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -21,10 +23,11 @@ module.exports = {
       lg: "960px",
       xl: "1200px",
     },
-    fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
-    },
+
     extend: {
+      fontFamily: {
+        bodyFont: ["Urbanist", ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: "#1c1c22",
         secondary: "#C8CFA0",

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Urbanist";
+    src: url("../fonts/urbanist.woff2");
+
+  }
+
+@layer base {
+    body {
+      @apply font-bodyFont bg-primary text-white leading-loose ;
+    }
+    .h1 {
+      @apply text-[48px] xl:text-[80px] font-semibold ;
+    }
+    .h2 {
+      @apply text-[36px] xl:text-[48px]  font-semibold ;
+    }
+    .h3 {
+      @apply text-[20px] xl:text-[24px]  font-semibold ;
+    }
+    .text-outline {
+      -webkit-text-stroke: 1px #ffffff;
+    }
+    
+    .text-outline-hover {
+      -webkit-text-stroke: 1px #00ff99;
+    }
+    p {
+      @apply text-[18px]
+    }
+  }
+

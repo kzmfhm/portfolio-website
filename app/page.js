@@ -9,15 +9,15 @@ export default function Home() {
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-3 xl:pb-8">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <h1 className="h1 mb-2">
+            <h1 className="h1 ">
               Hello I&apos;m <br />
-              <span className="text-accent">khuzaima </span>
+              <span className="text-accent text-8xl">khuzaima </span>
             </h1>
 
-            <span className="text-2xl">Software Developer</span>
+            <span className="text-4xl">Software Developer</span>
             <p className="max-w-[500px] mb-9 text-white/80 mt-9">
               I excel in crafting elegant digital experiences and I am efficient
               in various programming languages and technologies
@@ -27,7 +27,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="flex uppercase gap-2"
+                className="flex uppercase gap-2 text-1xl"
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
