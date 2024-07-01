@@ -113,7 +113,7 @@ const Work = () => {
               {/* outline num */}
               <div className="text-8xl font-bold text-transparent text-outline group-hover:text-outline-hover transition-all duration-500">{project.num}</div>
               {/* title*/}
-              <h2 className="text-[42px] font-bold text-white group-hover:text-outline-hover transition-all duration-500 capitalize">{project.title}</h2>
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.title}</h2>
               {/* description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
