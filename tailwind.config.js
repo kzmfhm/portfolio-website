@@ -29,10 +29,10 @@ module.exports = {
         bodyFont: ["Urbanist", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#1c1c22",
+        primary: "#191919",
         secondary: "#C8CFA0",
         accent: {
-          DEFAULT: "#00ff99",
+          DEFAULT: "#93B1A6",
           hover: "#00e187",
         },
       },
