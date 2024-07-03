@@ -14,7 +14,7 @@ export default function Home() {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <h1 className="h1 ">
               Hello I&apos;m <br />
-              <span className="text-accent text-8xl">khuzaima </span>
+              <span className="text-accent text-6xl">khuzaima </span>
             </h1>
 
             <span className="text-4xl">Software Developer</span>
