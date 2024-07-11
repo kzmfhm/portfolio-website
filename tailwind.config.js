@@ -29,7 +29,7 @@ module.exports = {
         bodyFont: ["Urbanist", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#191919",
+        primary: "#010B13",
         secondary: "#C8CFA0",
         accent: {
           DEFAULT: "#93B1A6",
