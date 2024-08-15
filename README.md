@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### ⭐️Support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if this project helped you.
