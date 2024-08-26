@@ -8,7 +8,7 @@
     src: url("../fonts/urbanist.woff2");
 
   }
-
+/* base styles */
 @layer base {
     body {
       @apply font-bodyFont bg-primary text-white leading-loose ;
