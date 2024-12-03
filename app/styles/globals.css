@@ -2,38 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-    font-family: "Urbanist";
-    src: url("../fonts/urbanist.woff2");
-
-  }
+  font-family: "Urbanist";
+  src: url("../fonts/urbanist.woff2");
+}
 /* base styles */
 @layer base {
-    body {
-      @apply font-bodyFont bg-primary text-white leading-loose ;
-    }
-    .h1 {
-      @apply text-[48px] xl:text-[80px] font-semibold ;
-    }
-    .h2 {
-      @apply text-[36px] xl:text-[48px]  font-semibold ;
-    }
-    .h3 {
-      @apply text-[20px] xl:text-[24px]  font-semibold ;
-    }
-    .text-outline {
-      -webkit-text-stroke: 1px #ffffff;
-    }
-    
-    .text-outline-hover {
-      -webkit-text-stroke: 1px #93B1A6;
-    }
-    p {
-      @apply text-[18px]
-    }
-    .span {
-      @apply text-[18px]
-    }
+  body {
+    @apply font-bodyFont bg-primary text-white leading-loose;
+  }
+  .h1 {
+    @apply text-[48px] xl:text-[80px] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px]  font-semibold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px]  font-semibold;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
   }
 
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #93b1a6;
+  }
+  p {
+    @apply text-[18px];
+  }
+  .span {
+    @apply text-[18px];
+  }
+}
+
+/* styles.css */
+@media (max-width: 1200px) {
+  .nav-hidden {
+    display: none;
+  }
+}
